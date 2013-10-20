@@ -19,24 +19,16 @@ public class AsyncLoadDatabase extends AsyncTask<Void, Integer, Void> {
 
     private Context context;
     private DatabaseInitializable app;
-    private Exception exception;
     private static DatabaseConfig config;
 
     public AsyncLoadDatabase(DatabaseInitializable obj) {
-        Log.d(TAG, "AsyncLoadDatabase constructor");
         this.context = ((Activity) obj).getApplicationContext().getApplicationContext();
         this.app = obj;
         this.config = app.getDatabaseConfig();
     }
 
-    /*public void detach() {
-        Log.d(TAG, "detach");
-        this.app = null;
-    }*/
-
     @Override
     protected Void doInBackground(Void... params) {
-        Log.d(TAG, "doInBackground");
         final String dbPath = getDatabasePath(context, config);
         final String dbsDbPath = getDatabasesDBPath(context, config);
 
@@ -44,8 +36,12 @@ public class AsyncLoadDatabase extends AsyncTask<Void, Integer, Void> {
             File databaseFile = new File(dbPath);
             File databasesDBFile = new File(dbsDbPath);
 
-            if (databaseFile.exists() || databasesDBFile.exists()) {
+            if (databaseFile.exists()) {
+                Log.d(TAG, "Deleting file:" + dbPath);
                 databaseFile.delete();
+            }
+            if (databasesDBFile.exists()) {
+                Log.d(TAG, "Deleting file:" + dbsDbPath);
                 databasesDBFile.delete();
             }
 
@@ -53,7 +49,6 @@ public class AsyncLoadDatabase extends AsyncTask<Void, Integer, Void> {
             copyFromAsset(config.getDatabaseDBName(), dbsDbPath);
 
         } catch (IOException e) {
-            this.exception = e;
             e.printStackTrace();
         }
 
@@ -71,12 +66,14 @@ public class AsyncLoadDatabase extends AsyncTask<Void, Integer, Void> {
 
             // Handling zipped database
             if (assetSource.endsWith("zip")) {
+                Log.v(TAG, "Unzipping file: " + assetSource);
                 in = new ZipInputStream(in);
                 ((ZipInputStream) in).getNextEntry(); // "Reads the next ZIP file entry and positions the stream at the beginning of the entry data."
             }
 
             out = new FileOutputStream(destination);
             // Transfer bytes from in to out
+            Log.v(TAG, "Copying file " + assetSource + " to " + destination);
             byte[] buf = new byte[1024];
             int len;
 
@@ -103,41 +100,59 @@ public class AsyncLoadDatabase extends AsyncTask<Void, Integer, Void> {
 
     @Override
     protected void onPreExecute() {
-        Log.d(TAG, "onPreExecute");
+        Log.v(TAG, "Opening waiting dialog");
         progressDialog = ProgressDialog.show((Context) app, config.getLoadingTitle(),
                 config.getLoadingText(), true, false);
     }
 
     @Override
     protected void onPostExecute(Void aVoid) {
-        Log.d(TAG, "onPostExecute");
         if (progressDialog != null) {
+            Log.v(TAG, "Closing waiting dialog");
             progressDialog.dismiss();
             progressDialog = null;
         }
 
         if (app != null) {
+            Log.v(TAG, "Launching app");
             app.loadWebApp();
         }
     }
 
     private static void createFolderIfNotExist(String filePath) {
+        Log.v(TAG, "Creating directory (if needed) for file: " + filePath);
         File file = new File(filePath);
         file.getParentFile().mkdirs();
     }
 
     private static String getDatabasePath(Context context, DatabaseConfig config) {
-        return context.getApplicationInfo().dataDir + "/" + DATABASE_FOLDER + "file__0/" + config.getDatabaseName();
+        String databasePath = context.getApplicationInfo().dataDir + "/" + DATABASE_FOLDER + "file__0/" + config.getDatabaseName();
+        Log.v(TAG, "databasePath: " + databasePath);
+        return databasePath;
     }
 
     private static String getDatabasesDBPath(Context context, DatabaseConfig config) {
-        return context.getApplicationInfo().dataDir + "/" + DATABASE_FOLDER + config.getDatabaseDBName();
+        String databasesDBPath = context.getApplicationInfo().dataDir + "/" + DATABASE_FOLDER + config.getDatabaseDBName();
+        Log.v(TAG, "databasesDBPath: " + databasesDBPath);
+        return databasesDBPath;
     }
 
     public static boolean shouldLoadDatabase(DatabaseInitializable app) {
         // TODO: Check the files size in case of incomplete copy (whatever the reason)?
         Context context = (Context) app;
         DatabaseConfig config = app.getDatabaseConfig();
-        return !new File(getDatabasePath(context, config)).exists() || !new File(getDatabasesDBPath(context, config)).exists();
+
+        boolean databaseExists = new File(getDatabasePath(context, config)).exists() && new File(getDatabasesDBPath(context, config)).exists();
+        boolean forceReload = config.isForceReload();
+
+        if(forceReload) {
+            Log.d(TAG, "ForceReload is true: the database will be overriden by the one in assets directory.");
+        } else if(!databaseExists) {
+            Log.d(TAG, "No local database: the database will be created from the one in assets directory.");
+        } else {
+            Log.d(TAG, "The local database already exists.");
+        }
+
+        return forceReload || !databaseExists;
     }
 }

@@ -44,11 +44,7 @@ var app = {
 
         function resetDB(tx) {
             tx.executeSql('DELETE FROM DEMO');
-            populateDB(tx);
-        }
-
-        function populateDB(tx) {
-            tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
+			tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
             tx.executeSql('INSERT OR REPLACE INTO DEMO (id, data) VALUES (1, "First row")');
             tx.executeSql('INSERT OR REPLACE INTO DEMO (id, data) VALUES (2, "Second row")');
         }
@@ -90,7 +86,6 @@ var app = {
         }
 
         function init() {
-            //db.transaction(populateDB, errorDB, successDB);
             db.transaction(readFromDB, errorDB, successDB);
         }
 

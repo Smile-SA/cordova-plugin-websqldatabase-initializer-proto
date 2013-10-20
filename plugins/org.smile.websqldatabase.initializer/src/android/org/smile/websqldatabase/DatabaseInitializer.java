@@ -1,6 +1,10 @@
 package org.smile.websqldatabase;
 
+import android.util.Log;
+
 public abstract class DatabaseInitializer {
+    private static final String TAG = "DatabaseInitializer";
+
     /**
      * Method to call to launch Cordova application with automatic database initialization
      */
@@ -10,6 +14,7 @@ public abstract class DatabaseInitializer {
         if (shouldLoadDatabase) {
             new AsyncLoadDatabase(app).execute();
         } else {
+            Log.v(TAG, "Launching app");
             app.loadWebApp();
         }
     }
