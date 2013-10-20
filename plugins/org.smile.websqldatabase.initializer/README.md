@@ -10,8 +10,19 @@ You need to:
 
    * add "implements DatabaseInitializable" on your main class
    * implement the getDatabaseConfig method (with the correct database configuration)
-   * implement the loadWebApp method (with the cordova init code usually in the onCreate method)
-   * remove the cordova init code in the onCreate method
+   * implement the loadWebApp method (with the Cordova init code usually in the onCreate method)
+   * remove the Cordova init code in the onCreate method
    * load the database and run the app with "DatabaseInitializer.load(this);" in the onCreate method
    * add the "Databases.db" file in your assets directory
-   * add the ziped database to initialize in your assets directory
+   * add the zipped database to initialize in your assets directory
+
+## iOS
+You need to:
+
+  * import "LoadDatabase.h" and "DatabaseConfig.h" in your main class
+  * in the init method of your main class, call the "load" method on a "LoadDatabase" object with the correct DatabaseConfig in parameters:
+
+
+    [[LoadDatabase new] load:[[DatabaseConfig alloc] init:@"myDemoSQLiteDB.zip" secondValue:@"myDemoSQLiteDB.db"]];
+  * add the "Databases.db" file in your Resources directory
+  * add the zipped database to initialize in your Resources directory
