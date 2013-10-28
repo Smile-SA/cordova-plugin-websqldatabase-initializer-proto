@@ -30,7 +30,7 @@
 
 #import <Cordova/CDVPlugin.h>
 
-// AJOUT POUR CHARGEMENT BDD
+// Added for Database Loading
 #import "LoadDatabase.h"
 #import "DatabaseConfig.h"
 
@@ -44,7 +44,7 @@
      *  -jm
      **/
     
-    // AJOUT POUR CHARGEMENT BDD
+    // Added for Database Loading
     [[LoadDatabase new] load:[[DatabaseConfig alloc] init:@"myDemoSQLiteDB.zip" secondValue:@"myDemoSQLiteDB.db"]];
     
     NSHTTPCookieStorage* cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
