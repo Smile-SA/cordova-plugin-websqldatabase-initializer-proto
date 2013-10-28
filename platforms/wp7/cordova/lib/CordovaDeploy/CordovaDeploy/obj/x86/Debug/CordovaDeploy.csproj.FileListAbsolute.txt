@@ -1,5 +1,0 @@
-C:\Users\Administrateur\Documents\git\cordova-plugin-websqldatabase-initializer-proto\platforms\wp7\cordova\lib\CordovaDeploy\CordovaDeploy\bin\Debug\CordovaDeploy.exe
-C:\Users\Administrateur\Documents\git\cordova-plugin-websqldatabase-initializer-proto\platforms\wp7\cordova\lib\CordovaDeploy\CordovaDeploy\bin\Debug\CordovaDeploy.pdb
-C:\Users\Administrateur\Documents\git\cordova-plugin-websqldatabase-initializer-proto\platforms\wp7\cordova\lib\CordovaDeploy\CordovaDeploy\obj\x86\Debug\CordovaDeploy.csprojResolveAssemblyReference.cache
-C:\Users\Administrateur\Documents\git\cordova-plugin-websqldatabase-initializer-proto\platforms\wp7\cordova\lib\CordovaDeploy\CordovaDeploy\obj\x86\Debug\CordovaDeploy.exe
-C:\Users\Administrateur\Documents\git\cordova-plugin-websqldatabase-initializer-proto\platforms\wp7\cordova\lib\CordovaDeploy\CordovaDeploy\obj\x86\Debug\CordovaDeploy.pdb
