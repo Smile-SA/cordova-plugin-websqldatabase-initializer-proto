@@ -40,7 +40,7 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        var db = window.openDatabase("proto", "1.0", "Proto DB", 1000000);
+        var db = window.openDatabase("myDemoSQLiteDB.db", "1.0", "Proto DB", 1000000);
 
         function resetDB(tx) {
             tx.executeSql('DELETE FROM DEMO');

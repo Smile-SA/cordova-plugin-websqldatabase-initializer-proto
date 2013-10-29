@@ -47,14 +47,14 @@
 		945C2D47180DFCED0035BB1C /* myDemoSQLiteDB.zip in Resources */ = {isa = PBXBuildFile; fileRef = 945C2D45180DFCED0035BB1C /* myDemoSQLiteDB.zip */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		F840E1F1165FE0F500CFE078 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = F840E1F0165FE0F500CFE078 /* config.xml */; };
-		3102BCDA97124463A0A1C092 /* ioapi.c in Resources */ = {isa = PBXBuildFile; fileRef = C729CC105D7343E7851F4209 /* ioapi.c */; };
-		2B35641A89B9470E87F8CAB9 /* mztools.c in Resources */ = {isa = PBXBuildFile; fileRef = 353A905EADC34E39B353C651 /* mztools.c */; };
-		BB040337E7C84E2E854C6621 /* unzip.c in Resources */ = {isa = PBXBuildFile; fileRef = A889386959D14892BAFAC82C /* unzip.c */; };
-		1C0C8CA821D44AF79030D8B8 /* zip.c in Resources */ = {isa = PBXBuildFile; fileRef = C70F6BA1E4A24B468D98D50E /* zip.c */; };
-		877E6E0E042347B6BA72F119 /* ZipArchive.mm in Resources */ = {isa = PBXBuildFile; fileRef = 7ADD17780DA1469A89E1D726 /* ZipArchive.mm */; settings = {COMPILER_FLAGS = -fno-objc-arc; }; };
-		278275525ED9451EA63AE926 /* DatabaseConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CD7F5D0C72438381AC51A7 /* DatabaseConfig.m */; };
-		C2150149E5FC46A48E9D16A0 /* LoadDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = C01FCE766EE44411AD4A4A79 /* LoadDatabase.m */; };
-		7A18A1BBEBE7462FAC1608A7 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4F041F25E546F4A0C54F08 /* libz.1.2.5.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
+		1A098F79BF9D403FAFD57DE4 /* ioapi.c in Resources */ = {isa = PBXBuildFile; fileRef = CE455F5FC5384921B838862E /* ioapi.c */; };
+		440667B4C4F248D898CB9914 /* mztools.c in Resources */ = {isa = PBXBuildFile; fileRef = 50FB97DF6B784AF18BF7A584 /* mztools.c */; };
+		BDF4647FC3584B0189F4C03B /* unzip.c in Resources */ = {isa = PBXBuildFile; fileRef = 7E5AF418330C44B18945D2C5 /* unzip.c */; };
+		CA1387F079AE4E8182BD2406 /* zip.c in Resources */ = {isa = PBXBuildFile; fileRef = BACFDD28AEC1445DB6ADD0D0 /* zip.c */; };
+		7D5EDEF6FEB1455BB7537FB4 /* ZipArchive.mm in Resources */ = {isa = PBXBuildFile; fileRef = C28584CEBF5F460A9770B1F5 /* ZipArchive.mm */; settings = {COMPILER_FLAGS = -fno-objc-arc; }; };
+		CFCF3350BD0D4222A3478655 /* DatabaseConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 700271B058F743AFAB3BCAD6 /* DatabaseConfig.m */; };
+		15709605B45341F697D3221F /* LoadDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = FBAC04D7544C490BBFB92C94 /* LoadDatabase.m */; };
+		E7734694856D41EB8168FDCD /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F98CE6A054394B51B0CD38DB /* libz.1.2.5.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,22 +122,22 @@
 		945C2D45180DFCED0035BB1C /* myDemoSQLiteDB.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = myDemoSQLiteDB.zip; sourceTree = "<group>"; };
 		D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = WebSqlDatabaseInitializerProto/config.xml; sourceTree = "<group>"; };
-		C729CC105D7343E7851F4209 /* ioapi.c */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "ioapi.c"; path = "Plugins\org.smile.websqldatabase.initializer\ZipArchive\minizip\ioapi.c"; sourceTree = "<group>"; fileEncoding = 4; };
-		353A905EADC34E39B353C651 /* mztools.c */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "mztools.c"; path = "Plugins\org.smile.websqldatabase.initializer\ZipArchive\minizip\mztools.c"; sourceTree = "<group>"; fileEncoding = 4; };
-		A889386959D14892BAFAC82C /* unzip.c */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "unzip.c"; path = "Plugins\org.smile.websqldatabase.initializer\ZipArchive\minizip\unzip.c"; sourceTree = "<group>"; fileEncoding = 4; };
-		C70F6BA1E4A24B468D98D50E /* zip.c */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "zip.c"; path = "Plugins\org.smile.websqldatabase.initializer\ZipArchive\minizip\zip.c"; sourceTree = "<group>"; fileEncoding = 4; };
-		7ADD17780DA1469A89E1D726 /* ZipArchive.mm */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "ZipArchive.mm"; path = "Plugins\org.smile.websqldatabase.initializer\ZipArchive\ZipArchive.mm"; sourceTree = "<group>"; fileEncoding = 4; };
-		28CD7F5D0C72438381AC51A7 /* DatabaseConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "DatabaseConfig.m"; path = "Plugins\org.smile.websqldatabase.initializer\DatabaseConfig.m"; sourceTree = "<group>"; fileEncoding = 4; };
-		C01FCE766EE44411AD4A4A79 /* LoadDatabase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "LoadDatabase.m"; path = "Plugins\org.smile.websqldatabase.initializer\LoadDatabase.m"; sourceTree = "<group>"; fileEncoding = 4; };
-		9DE24B588FFB474991359226 /* crypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "crypt.h"; path = "Plugins\org.smile.websqldatabase.initializer\ZipArchive\minizip\crypt.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		328BB6AF132348649C8E22A6 /* ioapi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ioapi.h"; path = "Plugins\org.smile.websqldatabase.initializer\ZipArchive\minizip\ioapi.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		C171DED6E38A47778125FD4F /* mztools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "mztools.h"; path = "Plugins\org.smile.websqldatabase.initializer\ZipArchive\minizip\mztools.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		94A95EFD206D47EF8F7B074E /* unzip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "unzip.h"; path = "Plugins\org.smile.websqldatabase.initializer\ZipArchive\minizip\unzip.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		3F4F09A7A8BA4FC2A4312BFB /* zip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "zip.h"; path = "Plugins\org.smile.websqldatabase.initializer\ZipArchive\minizip\zip.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		73C79758D2DF4EBDAB5EAFD4 /* ZipArchive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ZipArchive.h"; path = "Plugins\org.smile.websqldatabase.initializer\ZipArchive\ZipArchive.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		4DDA14ABB6D841BB9CA484CB /* DatabaseConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DatabaseConfig.h"; path = "Plugins\org.smile.websqldatabase.initializer\DatabaseConfig.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		F5AB7296551A40B69724A115 /* LoadDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "LoadDatabase.h"; path = "Plugins\org.smile.websqldatabase.initializer\LoadDatabase.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		FF4F041F25E546F4A0C54F08 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libz.1.2.5.dylib"; path = "usr/lib/libz.1.2.5.dylib"; sourceTree = SDKROOT; fileEncoding = 4; };
+		CE455F5FC5384921B838862E /* ioapi.c */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "ioapi.c"; path = "org.smile.websqldatabase.initializer/ZipArchive/minizip/ioapi.c"; sourceTree = "<group>"; fileEncoding = 4; };
+		50FB97DF6B784AF18BF7A584 /* mztools.c */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "mztools.c"; path = "org.smile.websqldatabase.initializer/ZipArchive/minizip/mztools.c"; sourceTree = "<group>"; fileEncoding = 4; };
+		7E5AF418330C44B18945D2C5 /* unzip.c */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "unzip.c"; path = "org.smile.websqldatabase.initializer/ZipArchive/minizip/unzip.c"; sourceTree = "<group>"; fileEncoding = 4; };
+		BACFDD28AEC1445DB6ADD0D0 /* zip.c */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "zip.c"; path = "org.smile.websqldatabase.initializer/ZipArchive/minizip/zip.c"; sourceTree = "<group>"; fileEncoding = 4; };
+		C28584CEBF5F460A9770B1F5 /* ZipArchive.mm */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "ZipArchive.mm"; path = "org.smile.websqldatabase.initializer/ZipArchive/ZipArchive.mm"; sourceTree = "<group>"; fileEncoding = 4; };
+		700271B058F743AFAB3BCAD6 /* DatabaseConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "DatabaseConfig.m"; path = "org.smile.websqldatabase.initializer/DatabaseConfig.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		FBAC04D7544C490BBFB92C94 /* LoadDatabase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "LoadDatabase.m"; path = "org.smile.websqldatabase.initializer/LoadDatabase.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		D6824A1F4BF045AAA2D879F3 /* crypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "crypt.h"; path = "org.smile.websqldatabase.initializer/ZipArchive/minizip/crypt.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		D4DFFFB8DDD04E6480C57A47 /* ioapi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ioapi.h"; path = "org.smile.websqldatabase.initializer/ZipArchive/minizip/ioapi.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		6B85D801802A4F6C92D0BB1F /* mztools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "mztools.h"; path = "org.smile.websqldatabase.initializer/ZipArchive/minizip/mztools.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		AA6E478CC06B47239007A133 /* unzip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "unzip.h"; path = "org.smile.websqldatabase.initializer/ZipArchive/minizip/unzip.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		217A66DC18074A3F9CFC5125 /* zip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "zip.h"; path = "org.smile.websqldatabase.initializer/ZipArchive/minizip/zip.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		106D9753F61945FCB4788950 /* ZipArchive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ZipArchive.h"; path = "org.smile.websqldatabase.initializer/ZipArchive/ZipArchive.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		BC405543180648F38333117B /* DatabaseConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DatabaseConfig.h"; path = "org.smile.websqldatabase.initializer/DatabaseConfig.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		8F84440F3BCD443F9F1D0CE6 /* LoadDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "LoadDatabase.h"; path = "org.smile.websqldatabase.initializer/LoadDatabase.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		F98CE6A054394B51B0CD38DB /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libz.1.2.5.dylib"; path = "usr/lib/libz.1.2.5.dylib"; sourceTree = SDKROOT; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,7 +164,7 @@
 				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
 				30E5649213A7FCAF007403D8 /* CoreMedia.framework in Frameworks */,
 				5AEE5B35173C68D80009041E /* CoreLocation.framework in Frameworks */,
-				7A18A1BBEBE7462FAC1608A7 /* libz.1.2.5.dylib in Frameworks */,
+				E7734694856D41EB8168FDCD /* libz.1.2.5.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +272,7 @@
 				301BF5C4109A6A2B0062928A /* SystemConfiguration.framework */,
 				305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */,
 				30E5649113A7FCAF007403D8 /* CoreMedia.framework */,
-				FF4F041F25E546F4A0C54F08 /* libz.1.2.5.dylib */,
+				F98CE6A054394B51B0CD38DB /* libz.1.2.5.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -288,21 +288,21 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				C729CC105D7343E7851F4209 /* ioapi.c */,
-				353A905EADC34E39B353C651 /* mztools.c */,
-				A889386959D14892BAFAC82C /* unzip.c */,
-				C70F6BA1E4A24B468D98D50E /* zip.c */,
-				7ADD17780DA1469A89E1D726 /* ZipArchive.mm */,
-				28CD7F5D0C72438381AC51A7 /* DatabaseConfig.m */,
-				C01FCE766EE44411AD4A4A79 /* LoadDatabase.m */,
-				9DE24B588FFB474991359226 /* crypt.h */,
-				328BB6AF132348649C8E22A6 /* ioapi.h */,
-				C171DED6E38A47778125FD4F /* mztools.h */,
-				94A95EFD206D47EF8F7B074E /* unzip.h */,
-				3F4F09A7A8BA4FC2A4312BFB /* zip.h */,
-				73C79758D2DF4EBDAB5EAFD4 /* ZipArchive.h */,
-				4DDA14ABB6D841BB9CA484CB /* DatabaseConfig.h */,
-				F5AB7296551A40B69724A115 /* LoadDatabase.h */,
+				CE455F5FC5384921B838862E /* ioapi.c */,
+				50FB97DF6B784AF18BF7A584 /* mztools.c */,
+				7E5AF418330C44B18945D2C5 /* unzip.c */,
+				BACFDD28AEC1445DB6ADD0D0 /* zip.c */,
+				C28584CEBF5F460A9770B1F5 /* ZipArchive.mm */,
+				700271B058F743AFAB3BCAD6 /* DatabaseConfig.m */,
+				FBAC04D7544C490BBFB92C94 /* LoadDatabase.m */,
+				D6824A1F4BF045AAA2D879F3 /* crypt.h */,
+				D4DFFFB8DDD04E6480C57A47 /* ioapi.h */,
+				6B85D801802A4F6C92D0BB1F /* mztools.h */,
+				AA6E478CC06B47239007A133 /* unzip.h */,
+				217A66DC18074A3F9CFC5125 /* zip.h */,
+				106D9753F61945FCB4788950 /* ZipArchive.h */,
+				BC405543180648F38333117B /* DatabaseConfig.h */,
+				8F84440F3BCD443F9F1D0CE6 /* LoadDatabase.h */,
 			);
 			name = Plugins;
 			path = WebSqlDatabaseInitializerProto/Plugins;
@@ -472,13 +472,13 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
-				3102BCDA97124463A0A1C092 /* ioapi.c in Resources */,
-				2B35641A89B9470E87F8CAB9 /* mztools.c in Resources */,
-				BB040337E7C84E2E854C6621 /* unzip.c in Resources */,
-				1C0C8CA821D44AF79030D8B8 /* zip.c in Resources */,
-				877E6E0E042347B6BA72F119 /* ZipArchive.mm in Resources */,
-				278275525ED9451EA63AE926 /* DatabaseConfig.m in Sources */,
-				C2150149E5FC46A48E9D16A0 /* LoadDatabase.m in Sources */,
+				1A098F79BF9D403FAFD57DE4 /* ioapi.c in Resources */,
+				440667B4C4F248D898CB9914 /* mztools.c in Resources */,
+				BDF4647FC3584B0189F4C03B /* unzip.c in Resources */,
+				CA1387F079AE4E8182BD2406 /* zip.c in Resources */,
+				7D5EDEF6FEB1455BB7537FB4 /* ZipArchive.mm in Resources */,
+				CFCF3350BD0D4222A3478655 /* DatabaseConfig.m in Sources */,
+				15709605B45341F697D3221F /* LoadDatabase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
