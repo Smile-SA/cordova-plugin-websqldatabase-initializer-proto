@@ -1,6 +1,3 @@
-# Mac OS X
-*.DS_Store
-
 # Xcode
 *.pbxuser
 *.mode1v3
@@ -9,3 +6,7 @@
 *.xcuserstate
 project.xcworkspace/
 xcuserdata/
+
+
+build/
+console.log
